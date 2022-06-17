@@ -9,6 +9,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class SignupComponent implements OnInit {
 
   signupForm!: FormGroup;
+  passwordMinLength: number = 6;
   constructor(
     private fb: FormBuilder
   ) { }
@@ -20,7 +21,7 @@ export class SignupComponent implements OnInit {
   initForm(): void {
     this.signupForm = this.fb.group({
       email: ['', Validators.required],
-      password: ['', [Validators.required, Validators.maxLength(6)]]
+      password: ['', [Validators.required, Validators.minLength(this.passwordMinLength)]]
     })
   }
 

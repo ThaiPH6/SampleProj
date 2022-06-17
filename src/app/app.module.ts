@@ -12,6 +12,12 @@ import { CurrentTrainComponent } from './training/current-train/current-train.co
 import { NewTrainComponent } from './training/new-train/new-train.component';
 import { PastTrainComponent } from './training/past-train/past-train.component';
 import { HomepageComponent } from './layouts/homepage/homepage.component';
+import { MainHeaderComponent } from './layouts/main-header/main-header.component';
+import { MainSidebarComponent } from './layouts/main-sidebar/main-sidebar.component';
+import { MainFooterComponent } from './layouts/main-footer/main-footer.component';
+import { ControlSidebarComponent } from './layouts/control-sidebar/control-sidebar.component';
+import { ContentWrapperComponent } from './layouts/content-wrapper/content-wrapper.component';
+import { MainFeatureModule } from './main-feature/main-feature.module';
 
 @NgModule({
   declarations: [
@@ -22,13 +28,19 @@ import { HomepageComponent } from './layouts/homepage/homepage.component';
     CurrentTrainComponent,
     NewTrainComponent,
     PastTrainComponent,
-    HomepageComponent
+    HomepageComponent,
+    MainHeaderComponent,
+    MainSidebarComponent,
+    MainFooterComponent,
+    ControlSidebarComponent,
+    ContentWrapperComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
+    MainFeatureModule
   ],
   providers: [],
   bootstrap: [AppComponent]
