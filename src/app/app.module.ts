@@ -18,6 +18,7 @@ import { MainFooterComponent } from './layouts/main-footer/main-footer.component
 import { ControlSidebarComponent } from './layouts/control-sidebar/control-sidebar.component';
 import { ContentWrapperComponent } from './layouts/content-wrapper/content-wrapper.component';
 import { MainFeatureModule } from './main-feature/main-feature.module';
+import { AuthService } from './auth/auth.service';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,7 @@ import { MainFeatureModule } from './main-feature/main-feature.module';
     MaterialModule,
     MainFeatureModule
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
